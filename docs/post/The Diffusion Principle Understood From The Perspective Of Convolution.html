@@ -10,7 +10,26 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="# 1. What is Convolution?
+<meta name="description" content="# Table of Contents
+
+- [1. What is Convolution?](#1-what-is-convolution)
+  - [1.1 Understanding Convolution from a Mathematical Perspective](#11-understanding-convolution-from-a-mathematical-perspective)
+  - [1.2 Visualizing Convolution](#12-visualizing-convolution)
+
+- [2. Diffusion Model Principles](#2-diffusion-model-principles)
+  - [2.1 Principles of Early Generative Models](#21-principles-of-early-generative-models)
+  - [2.2 Diffusion Model](#22-diffusion-model)
+  - [2.3 Convolution in Diffusion Models](#23-convolution-in-diffusion-models)
+
+- [3. Code Implementation of Diffusion](#3-code-implementation-of-diffusion)
+  - [3.1 Importing Required Libraries](#31-importing-required-libraries)
+  - [3.2 Using the MNIST Dataset](#32-using-the-mnist-dataset)
+  - [3.3 Writing the Noise Corruption Formula](#33-writing-the-noise-corruption-formula)
+  - [3.4 Creating a Simple UNet Model](#34-creating-a-simple-unet-model)
+  - [3.5 Defining the Training Parameters](#35-defining-the-training-parameters)
+  - [3.6 Testing the Model](#36-testing-the-model)
+- [Conclusion](#Conclusion)
+# 1. What is Convolution?
 
 ## 1.1 Understanding Convolution from a Mathematical Perspective
 
@@ -256,7 +275,26 @@ This shows the final results of testing the model, and the output looks quite im
 
 This concludes the explanation of the diffusion model. You can try modifying the UNet network or adjusting parameters to see if you can achieve even more remarkable results!。">
 <meta property="og:title" content="The Diffusion Principle Understood From The Perspective Of Convolution">
-<meta property="og:description" content="# 1. What is Convolution?
+<meta property="og:description" content="# Table of Contents
+
+- [1. What is Convolution?](#1-what-is-convolution)
+  - [1.1 Understanding Convolution from a Mathematical Perspective](#11-understanding-convolution-from-a-mathematical-perspective)
+  - [1.2 Visualizing Convolution](#12-visualizing-convolution)
+
+- [2. Diffusion Model Principles](#2-diffusion-model-principles)
+  - [2.1 Principles of Early Generative Models](#21-principles-of-early-generative-models)
+  - [2.2 Diffusion Model](#22-diffusion-model)
+  - [2.3 Convolution in Diffusion Models](#23-convolution-in-diffusion-models)
+
+- [3. Code Implementation of Diffusion](#3-code-implementation-of-diffusion)
+  - [3.1 Importing Required Libraries](#31-importing-required-libraries)
+  - [3.2 Using the MNIST Dataset](#32-using-the-mnist-dataset)
+  - [3.3 Writing the Noise Corruption Formula](#33-writing-the-noise-corruption-formula)
+  - [3.4 Creating a Simple UNet Model](#34-creating-a-simple-unet-model)
+  - [3.5 Defining the Training Parameters](#35-defining-the-training-parameters)
+  - [3.6 Testing the Model](#36-testing-the-model)
+- [Conclusion](#Conclusion)
+# 1. What is Convolution?
 
 ## 1.1 Understanding Convolution from a Mathematical Perspective
 
@@ -571,7 +609,39 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><h1>1. What is Convolution?</h1>
+<div class="markdown-body" id="postBody"><h1>Table of Contents</h1>
+<ul>
+<li>
+<p><a href="#1-what-is-convolution">1. What is Convolution?</a></p>
+<ul>
+<li><a href="#11-understanding-convolution-from-a-mathematical-perspective">1.1 Understanding Convolution from a Mathematical Perspective</a></li>
+<li><a href="#12-visualizing-convolution">1.2 Visualizing Convolution</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#2-diffusion-model-principles">2. Diffusion Model Principles</a></p>
+<ul>
+<li><a href="#21-principles-of-early-generative-models">2.1 Principles of Early Generative Models</a></li>
+<li><a href="#22-diffusion-model">2.2 Diffusion Model</a></li>
+<li><a href="#23-convolution-in-diffusion-models">2.3 Convolution in Diffusion Models</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#3-code-implementation-of-diffusion">3. Code Implementation of Diffusion</a></p>
+<ul>
+<li><a href="#31-importing-required-libraries">3.1 Importing Required Libraries</a></li>
+<li><a href="#32-using-the-mnist-dataset">3.2 Using the MNIST Dataset</a></li>
+<li><a href="#33-writing-the-noise-corruption-formula">3.3 Writing the Noise Corruption Formula</a></li>
+<li><a href="#34-creating-a-simple-unet-model">3.4 Creating a Simple UNet Model</a></li>
+<li><a href="#35-defining-the-training-parameters">3.5 Defining the Training Parameters</a></li>
+<li><a href="#36-testing-the-model">3.6 Testing the Model</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#Conclusion">Conclusion</a></p>
+</li>
+</ul>
+<h1>1. What is Convolution?</h1>
 <h2>1.1 Understanding Convolution from a Mathematical Perspective</h2>
 <p>The mathematical formula for convolution is typically represented as the convolution of two functions, ( f(x) ) and ( g(x) ). It is defined as:</p>
 <p>$$

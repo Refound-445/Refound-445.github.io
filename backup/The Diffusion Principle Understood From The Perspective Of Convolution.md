@@ -1,3 +1,22 @@
+# Table of Contents
+
+- [1. What is Convolution?](#1-what-is-convolution)
+  - [1.1 Understanding Convolution from a Mathematical Perspective](#11-understanding-convolution-from-a-mathematical-perspective)
+  - [1.2 Visualizing Convolution](#12-visualizing-convolution)
+
+- [2. Diffusion Model Principles](#2-diffusion-model-principles)
+  - [2.1 Principles of Early Generative Models](#21-principles-of-early-generative-models)
+  - [2.2 Diffusion Model](#22-diffusion-model)
+  - [2.3 Convolution in Diffusion Models](#23-convolution-in-diffusion-models)
+
+- [3. Code Implementation of Diffusion](#3-code-implementation-of-diffusion)
+  - [3.1 Importing Required Libraries](#31-importing-required-libraries)
+  - [3.2 Using the MNIST Dataset](#32-using-the-mnist-dataset)
+  - [3.3 Writing the Noise Corruption Formula](#33-writing-the-noise-corruption-formula)
+  - [3.4 Creating a Simple UNet Model](#34-creating-a-simple-unet-model)
+  - [3.5 Defining the Training Parameters](#35-defining-the-training-parameters)
+  - [3.6 Testing the Model](#36-testing-the-model)
+- [Conclusion](#Conclusion)
 # 1. What is Convolution?
 
 ## 1.1 Understanding Convolution from a Mathematical Perspective
