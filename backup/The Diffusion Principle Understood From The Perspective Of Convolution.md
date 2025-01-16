@@ -26,9 +26,10 @@ Here, \( f[k] \) and \( g[k] \) are discrete signals, and \( n \) is the discret
 
 In the image, the left part shows the pixel value matrix of a grayscale image (i.e., how the image is represented as numbers for a computer). In the middle is the **convolution kernel** matrix, which slides over the original image starting from the top-left corner. The kernel computes a value at each position, and this process is repeated across the image. The resulting values form the **right image (feature map)**, which contains the local features of the original image obtained through the convolution process.
 
-![Image here](https://i-blog.csdnimg.cn/direct/a822820b303d4eafa023d02a97898807.png)
+![1](https://github.com/user-attachments/assets/53f5b817-0e70-40c6-9294-d3ec78b2b2c2)
 
-The animation works like this: ![Image here](https://i-blog.csdnimg.cn/direct/e8f91c305ccc4be69a52862363545df2.webp)
+The animation works like this: 
+![2](https://github.com/user-attachments/assets/f7697387-d053-4128-83b2-7ec005072e44)
 
 # 2. Diffusion Model Principles
 
@@ -36,7 +37,9 @@ The animation works like this: ![Image here](https://i-blog.csdnimg.cn/direct/e8
 
 Early generative models such as GAN (Generative Adversarial Networks) and VAE (Variational Autoencoders) involve inverting the original model. For instance, in GAN, the recognition model is a conventional convolution network used for identifying generated images. The generation model, however, reverses this by using a transposed convolution network (also called deconvolution) to generate images, but this approach doesn't produce ideal results.
 
-Let's talk about transposed convolution. Transposed convolution is the reverse of convolution: convolution turns a large matrix into a smaller one, whereas transposed convolution takes a smaller matrix and generates a larger one. As shown in the image below, it creates the dashed-line matrix! ![](https://i-blog.csdnimg.cn/direct/a71b44ad44434fd78a6b32e2393065b7.gif)
+Let's talk about transposed convolution. Transposed convolution is the reverse of convolution: convolution turns a large matrix into a smaller one, whereas transposed convolution takes a smaller matrix and generates a larger one. As shown in the image below, it creates the dashed-line matrix!
+![3](https://github.com/user-attachments/assets/83fbddff-10fd-4fa5-9bc0-6e21785d1407)
+
 
 ## 2.2 Diffusion Model
 
@@ -44,7 +47,7 @@ While directly generating images is not ideal, scientists have drawn inspiration
 
 Thus, diffusion models were born. We start by adding noise to an image’s pixels, which results in a very chaotic image. Conversely, we can also reverse this process to recover the original image from this noisy one.
 
-![Image here](https://i-blog.csdnimg.cn/direct/6c1dfe49dc5941c797c0a8868be5b79b.png)
+![4](https://github.com/user-attachments/assets/9a1ed29c-9b05-480b-abe6-77b4268c9429)
 
 ## 2.3 Convolution in Diffusion Models
 
@@ -52,10 +55,12 @@ Diffusion models typically use a UNet network to predict denoised images, with t
 
 As shown in the image, this is a convolution kernel from the UNet network used in diffusion (with code implementation to follow). In fact, throughout the entire network, the properties of the convolution kernel remain largely unchanged, and the input's width and height do not change during the forward pass. Only the number of channels changes.
 
-![Image here](https://i-blog.csdnimg.cn/direct/76389456b2a8436b8d38156e22b7326f.png)
+![5](https://github.com/user-attachments/assets/a8f12985-c9c2-4776-958f-a020387357f1)
 We remembered, **convolution** maps a matrix onto a feature matrix, while **diffusion** introduces disorder into the matrix.Try to think of it this way: **convolution** disturbs or restores the local features of a matrix, while **diffusion** relies on **convolution** to diffuse local features.
 
-![Image here](https://i-blog.csdnimg.cn/direct/1066b9f4fd8c4f3fb70c350e6679c624.png)
+![6](https://github.com/user-attachments/assets/7b937214-fa6f-426f-9037-4094e9f5e578)
+
+
 
 # 3. Code Implementation of Diffusion
 
@@ -145,7 +150,8 @@ class BasicUNet(nn.Module):
 
 The network looks like this:
 
-![Image here](https://i-blog.csdnimg.cn/direct/9d885023e67d43dd84c7e5b27bd770c9.png)
+![7](https://github.com/user-attachments/assets/b6fa8e41-f15b-477b-a9f1-59cadc9e3770)
+
 
 ## 3.5 Defining the Training Parameters
 
@@ -236,7 +242,7 @@ for i in range(n_steps):
     axs[i, 1].imshow(torchvision.utils.make_grid(pred_output_history[i])[0].clip(0, 1), cmap="Greys")
 ```
 
-![Image here](https://i-blog.csdnimg.cn/direct/84fa926fde4146a6812053b5d88f366b.png)
+![output](https://github.com/user-attachments/assets/2426e5b6-d33e-49b9-acdd-465e1c7a634d)
 
 This shows the final results of testing the model, and the output looks quite impressive!
 
