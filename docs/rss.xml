@@ -1,24 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>My Blogs</title><link>https://Refound-445.github.io</link><description>Just My Blogs</description><copyright>My Blogs</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/137168144</url><title>avatar</title><link>https://Refound-445.github.io</link></image><lastBuildDate>Thu, 16 Jan 2025 08:36:10 +0000</lastBuildDate><managingEditor>My Blogs</managingEditor><ttl>60</ttl><webMaster>My Blogs</webMaster><item><title>The Diffusion Principle Understood From The Perspective Of Convolution</title><link>https://Refound-445.github.io/post/The%20Diffusion%20Principle%20Understood%20From%20The%20Perspective%20Of%20Convolution.html</link><description># Table of Contents&#13;
-&#13;
-- [1. What is Convolution?](#1-what-is-convolution)&#13;
-  - [1.1 Understanding Convolution from a Mathematical Perspective](#11-understanding-convolution-from-a-mathematical-perspective)&#13;
-  - [1.2 Visualizing Convolution](#12-visualizing-convolution)&#13;
-&#13;
-- [2. Diffusion Model Principles](#2-diffusion-model-principles)&#13;
-  - [2.1 Principles of Early Generative Models](#21-principles-of-early-generative-models)&#13;
-  - [2.2 Diffusion Model](#22-diffusion-model)&#13;
-  - [2.3 Convolution in Diffusion Models](#23-convolution-in-diffusion-models)&#13;
-&#13;
-- [3. Code Implementation of Diffusion](#3-code-implementation-of-diffusion)&#13;
-  - [3.1 Importing Required Libraries](#31-importing-required-libraries)&#13;
-  - [3.2 Using the MNIST Dataset](#32-using-the-mnist-dataset)&#13;
-  - [3.3 Writing the Noise Corruption Formula](#33-writing-the-noise-corruption-formula)&#13;
-  - [3.4 Creating a Simple UNet Model](#34-creating-a-simple-unet-model)&#13;
-  - [3.5 Defining the Training Parameters](#35-defining-the-training-parameters)&#13;
-  - [3.6 Testing the Model](#36-testing-the-model)&#13;
-- [Conclusion](#Conclusion)&#13;
-# 1. What is Convolution?&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>My Blogs</title><link>https://Refound-445.github.io</link><description>Just My Blogs</description><copyright>My Blogs</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/137168144</url><title>avatar</title><link>https://Refound-445.github.io</link></image><lastBuildDate>Thu, 16 Jan 2025 08:39:28 +0000</lastBuildDate><managingEditor>My Blogs</managingEditor><ttl>60</ttl><webMaster>My Blogs</webMaster><item><title>The Diffusion Principle Understood From The Perspective Of Convolution</title><link>https://Refound-445.github.io/post/The%20Diffusion%20Principle%20Understood%20From%20The%20Perspective%20Of%20Convolution.html</link><description># 1. What is Convolution?&#13;
 &#13;
 ## 1.1 Understanding Convolution from a Mathematical Perspective&#13;
 &#13;
